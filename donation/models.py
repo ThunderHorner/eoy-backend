@@ -19,7 +19,9 @@ class Donation(models.Model):
     campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, related_name='donations')
     name = models.CharField(max_length=255, blank=True, null=True)
     message = models.TextField(blank=True, null=True)
-    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    amount = models.DecimalField(max_digits=100, decimal_places=20)
+    tx_hash = models.CharField(max_length=255, blank=False, null=False)
+    currency = models.CharField(max_length=100, blank=False, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

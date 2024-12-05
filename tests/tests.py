@@ -32,7 +32,7 @@ class DonationAPITestCase(APITestCase):
         data = {
             "title": "New Campaign",
             "goal": 200.0,
-            "wallet_address":"0xB23a9e81c098aeDeAa829708560c787C9F4c4F47"
+            "wallet_address": "0xB23a9e81c098aeDeAa829708560c787C9F4c4F47"
         }
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -70,15 +70,20 @@ class DonationAPITestCase(APITestCase):
         # Test creating a donation for a campaign
         url = reverse('donate', kwargs={'campaign_id': self.campaign.id})
         data = {
-            "name": "Anonymous",
-            "message": "Great work!",
-            "amount": 50.0,
-            "campaign":self.campaign.id
+            "name": "Kostas",
+            "message": "Test donation",
+            "amount": "0.00001",
+            'currency':'ETH',
+            "campaign": self.campaign.id,
+            "tx_hash": "0xeb818a145cdc40d77c4d7f7078479742d48df1cde216bbbbb97374bae5d35a45"
         }
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.json())
-        self.assertEqual(response.data['name'], "Anonymous")
-        self.assertEqual(response.data['amount'], "50.00")
+        self.assertEqual(response.data['name'], data['name'])
+        self.assertEqual(response.data['message'], data['message'])
+        self.assertEqual(response.data['tx_hash'], data['tx_hash'])
+        self.assertEqual(response.data['currency'], data['currency'])
+        self.assertEqual(float(response.data['amount']), float(data['amount']))
 
     def test_create_donation_invalid_campaign(self):
         # Test donating to a non-existent campaign
@@ -91,7 +96,6 @@ class DonationAPITestCase(APITestCase):
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
         self.assertEqual(response.data['error'], "Campaign not found")
-
 
     def test_register_user(self):
         data = {

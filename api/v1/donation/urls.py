@@ -5,4 +5,5 @@ urlpatterns = [
     path('campaigns/', CampaignListCreateView.as_view(), name='campaign-list'),
     path('campaigns/<int:pk>/', CampaignDetailView.as_view(), name='campaign-detail'),
     path('campaigns/<int:campaign_id>/donate/', DonationCreateView.as_view(), name='donate'),
+    path('campaigns/<int:campaign_id>/donations/', DonationCreateView.as_view(), name='donate'),
 ]

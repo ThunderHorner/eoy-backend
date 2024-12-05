@@ -1,19 +1,20 @@
 from rest_framework.test import APITestCase
 from rest_framework import status
-from django.contrib.auth.models import User
+from users.models import User
 from django.urls import reverse
 from donation.models import Campaign, Donation
+from api.v1.users.serializers import RegisterUserSerializer
 
 
 class DonationAPITestCase(APITestCase):
     def setUp(self):
         # Create a user and authenticate
-        self.user = User.objects.create_user(username='testuser', password='password123')
-        self.client.login(username='testuser', password='password123')
+        self.user = User.objects.create_user(email='testemail@test.com', password='password123')
+        self.client.login(email='testemail@test.com', password='password123')
 
         # Obtain JWT token
         token_url = reverse('token_obtain_pair')
-        response = self.client.post(token_url, {'username': 'testuser', 'password': 'password123'})
+        response = self.client.post(token_url, {'email': 'testemail@test.com', 'password': 'password123'})
         self.token = response.data['access']
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.token}')
 
@@ -89,3 +90,31 @@ class DonationAPITestCase(APITestCase):
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
         self.assertEqual(response.data['error'], "Campaign not found")
+
+
+    def test_register_user(self):
+        data = {
+            'email': 'testemail2@test.com',
+            'battletag': 'Battle#1234',
+            'password': 'test_password'
+        }
+
+        serializer = RegisterUserSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+        url = reverse('register')
+        response = self.client.post(url, data, format='json')
+        self.assertEqual(response.status_code, 201, response.json())
+
+        user = User.objects.get(email='testemail2@test.com')
+        # Assert user is created
+        assert user is not None
+
+        # Assert the user instance is the same one returned from our RegisterUserSerializer
+
+        assert serializer.instance == user
+
+        # Assert the details are correct
+        assert user.email == data['email']
+        assert user.battletag == data['battletag']
+        assert user.check_password(data['password'])

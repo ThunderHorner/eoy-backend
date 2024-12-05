@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'users',
     'donation',
     'corsheaders',
+
 
 ]
 
@@ -141,3 +143,16 @@ CORS_ALLOWED_ORIGINS = [
     "https://your-frontend-domain.com",  # Production frontend
 ]
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+AUTH_USER_MODEL = 'users.User'
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=50),  # 50 days for the access token
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=60),  # Optional: 60 days for refresh token
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}

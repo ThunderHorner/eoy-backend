@@ -31,7 +31,8 @@ class DonationAPITestCase(APITestCase):
         url = reverse('campaign-list')
         data = {
             "title": "New Campaign",
-            "goal": 200.0
+            "goal": 200.0,
+            "wallet_address":"0xB23a9e81c098aeDeAa829708560c787C9F4c4F47"
         }
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)

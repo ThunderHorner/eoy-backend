@@ -3,6 +3,7 @@ from users.models import User
 
 class Campaign(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='campaigns')
+    wallet_address = models.CharField(max_length=100, blank=True, null=True)
     title = models.CharField(max_length=255)
     goal = models.DecimalField(max_digits=10, decimal_places=2)
     collected = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)

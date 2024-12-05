@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Add cors headers">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/donation/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/donation/api_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/donation/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/donation/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/users/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/users/api_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/users/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donation/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/donation/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eoy_2024_backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/eoy_2024_backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Order the donations" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +45,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -225,7 +215,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733400438765</updated>
       <workItem from="1733400440119" duration="116000" />
-      <workItem from="1733401775251" duration="9751000" />
+      <workItem from="1733401775251" duration="9862000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -251,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733407886271</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Order the donations">
+      <option name="closed" value="true" />
+      <created>1733412893436</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733412893436</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +258,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add cors headers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add cors headers" />
+    <MESSAGE value="Order the donations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order the donations" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_DonationAPITestCase.coverage" NAME="Test: tests.DonationAPITestCase Coverage Results" MODIFIED="1733403185838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

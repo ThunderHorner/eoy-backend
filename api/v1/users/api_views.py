@@ -23,38 +23,47 @@ class RegisterUserView(APIView):
 
     def post(self, request, *args, **kwargs):
         serializer = StreamLabsSerializer(data=request.data)
-        access_token = None
         if serializer.is_valid(raise_exception=True):
-            access_token = get_access_token(serializer.validated_data['code'])
-            return Response({"token":access_token}, 400)
-            streamlabs_user = get_user(access_token=access_token)
-            sl_data = streamlabs_user.get('streamlabs', {})
-            username = sl_data.get('username')
+            try:
+                with transaction.atomic():
+                    access_token = get_access_token(serializer.validated_data['code'])
+                    streamlabs_user = get_user(access_token=access_token)
+                    sl_data = streamlabs_user.get('streamlabs', {})
+                    username = sl_data.get('username')
 
-            user, created = User.objects.get_or_create(
-                defaults={
-                    'email': f"{username}@streamlabs.user",
-                    'first_name': sl_data.get('display_name', '').split()[0],
-                    'last_name': ' '.join(sl_data.get('display_name', '').split()[1:]),
-                    'is_active': True,
-                    'streamlabs_token': access_token
-                }
-            )
 
-            if not created:
-                user.streamlabs_token = access_token
-                user.save()
+                    user, created = User.objects.get_or_create(
+                        defaults={
+                            'email': f"{username}@streamlabs.user",
+                            'first_name': sl_data.get('display_name', '').split()[0],
+                            'last_name': ' '.join(sl_data.get('display_name', '').split()[1:]),
+                            'is_active': True,
+                            'streamlabs_token': access_token
+                        }
+                    )
 
-            # Generate JWT tokens
-            tokens = self.get_tokens_for_user(user)
+                    if not created:
+                        user.streamlabs_token = access_token
+                        user.save()
 
-            return Response({
-                **tokens,  # Include refresh and access tokens
-                'user': {
-                    'id': user.id,
-                    'email': user.email,
-                    'streamlabs_id': sl_data.get('id'),
-                    'streamlabs_token': access_token
-                },
-                'created': created
-            }, status=status.HTTP_201_CREATED if created else status.HTTP_200_OK)
+                    # Generate JWT tokens
+                    tokens = self.get_tokens_for_user(user)
+
+                    return Response({
+                        **tokens,  # Include refresh and access tokens
+                        'user': {
+                            'id': user.id,
+                            'email': user.email,
+                            'streamlabs_id': sl_data.get('id'),
+                            'streamlabs_token': access_token
+                        },
+                        'created': created
+                    }, status=status.HTTP_201_CREATED if created else status.HTTP_200_OK)
+
+            except Exception as e:
+                return Response({
+                    'error': str(e),
+                    'message': 'Failed to register user'
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

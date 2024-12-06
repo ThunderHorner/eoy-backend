@@ -2,9 +2,9 @@ import requests
 
 CLIENT_ID = "9da76297-69c2-4331-91df-1ceb46b95ea9"
 CLIENT_SECRET = "dk45lJxt8vXzgdgFstdbuYmo0Upv4tR8Ywr5ZqRR"
-REDIRECT_URI = "https://3a795c30ad8b.ngrok.app/auth"
+REDIRECT_URI = "https://cryptotip.elunesoft.com/auth"
 BASE_URL = "https://streamlabs.com/api/v2.0"
-
+# Constants
 
 def add_donation(*, access_token, name, identifier, amount, currency, message):
     BASE_URL = "https://streamlabs.com/api/v2.0"

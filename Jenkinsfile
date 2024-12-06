@@ -33,7 +33,7 @@ pipeline {
                         # Execute deployment steps on the server
                         ssh -o StrictHostKeyChecking=no ${DOCKER_SERVER} '
                             cd ${REMOTE_DIR} &&
-                            ./build.sh &&
+                            sh build.sh &&
                             sleep 5 &&
                             docker ps | grep crypto_tip_backend || echo "Container failed to start!"'
                         """

@@ -9,21 +9,20 @@ WORKDIR /app
 
 # Copy the requirements file to the working directory
 COPY requirements.txt /app/
-COPY api /app/
-COPY donation /app/
-COPY eoy_2024_backend /app/
-COPY templates /app/
-COPY users /app/
-COPY manage.py /app/
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire backend code to the container
-COPY . /app/
+# Copy application code to the container
+COPY api /app/api/
+COPY donation /app/donation/
+COPY eoy_2024_backend /app/eoy_2024_backend/
+COPY templates /app/templates/
+COPY users /app/users/
+COPY manage.py /app/
 
 # Expose the port the application will run on
 EXPOSE 8000
 
-# Set the command to run the backend
-CMD ["python", "app.py"]
+# Run migrations and start the server
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]

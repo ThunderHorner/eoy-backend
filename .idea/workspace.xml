@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Add wallet address">
+    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Add currency">
+      <change afterPath="$PROJECT_DIR$/add_donation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/as.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/donation/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ff.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ggfd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/donation/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/donation/api_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/v1/donation/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/donation/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/donation/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/donation/models.py" afterDir="false" />
@@ -43,6 +52,13 @@
     "Django tests.Test: tests.tests.DonationAPITestCase.test_create_donation.executor": "Run",
     "Django tests.Test: tests.tests.DonationAPITestCase.test_get_campaign_list.executor": "Run",
     "Django tests.Test: tests.tests.DonationAPITestCase.test_register_user.executor": "Run",
+    "Django tests.Test: tests.tests.DonationAPITestCase.test_update_campaign.executor": "Run",
+    "Python.add_donation.executor": "Run",
+    "Python.as.executor": "Run",
+    "Python.ff.executor": "Run",
+    "Python.gg.executor": "Run",
+    "Python.ss.executor": "Run",
+    "Python.utils.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -65,27 +81,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Django tests.Test: tests.tests.DonationAPITestCase.test_create_donation">
-    <configuration name="Test: tests.tests.DonationAPITestCase" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="eoy_2024_backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="tests.tests.DonationAPITestCase" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Test: tests.tests.DonationAPITestCase.test_create_campaign" type="DjangoTestsConfigurationType" temporary="true">
       <module name="eoy_2024_backend" />
       <option name="ENV_FILES" value="" />
@@ -128,7 +123,7 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test: tests.tests.DonationAPITestCase.test_get_campaign_list" type="DjangoTestsConfigurationType" temporary="true">
+    <configuration name="Test: tests.tests.DonationAPITestCase.test_update_campaign" type="DjangoTestsConfigurationType" temporary="true">
       <module name="eoy_2024_backend" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,14 +137,14 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="tests.tests.DonationAPITestCase.test_get_campaign_list" />
+      <option name="TARGET" value="tests.tests.DonationAPITestCase.test_update_campaign" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test: tests.tests.DonationAPITestCase.test_register_user" type="DjangoTestsConfigurationType" temporary="true">
+    <configuration name="add_donation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eoy_2024_backend" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,16 +153,41 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="tests.tests.DonationAPITestCase.test_register_user" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/add_donation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="eoy_2024_backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="eoy_2024_backend" type="Python.DjangoServer" factoryName="Django server">
@@ -198,10 +218,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Django tests.Test: tests.tests.DonationAPITestCase.test_create_donation" />
+        <item itemvalue="Django tests.Test: tests.tests.DonationAPITestCase.test_update_campaign" />
         <item itemvalue="Django tests.Test: tests.tests.DonationAPITestCase.test_create_campaign" />
-        <item itemvalue="Django tests.Test: tests.tests.DonationAPITestCase.test_register_user" />
-        <item itemvalue="Django tests.Test: tests.tests.DonationAPITestCase" />
-        <item itemvalue="Django tests.Test: tests.tests.DonationAPITestCase.test_get_campaign_list" />
+        <item itemvalue="Python.add_donation" />
+        <item itemvalue="Python.gg" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +242,8 @@
       <option name="presentableId" value="Default" />
       <updated>1733400438765</updated>
       <workItem from="1733400440119" duration="116000" />
-      <workItem from="1733401775251" duration="13562000" />
+      <workItem from="1733401775251" duration="29347000" />
+      <workItem from="1733471265940" duration="15678000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -272,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733413261780</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add currency">
+      <option name="closed" value="true" />
+      <created>1733417400378</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733417400378</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,17 +312,25 @@
     <MESSAGE value="Add cors headers" />
     <MESSAGE value="Order the donations" />
     <MESSAGE value="Add wallet address" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add wallet address" />
+    <MESSAGE value="Add currency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add currency" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_DonationAPITestCase.coverage" NAME="Test: tests.DonationAPITestCase Coverage Results" MODIFIED="1733403185838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_create_campaign.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_create_campaign Coverage Results" MODIFIED="1733413246026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$ff.coverage" NAME="ff Coverage Results" MODIFIED="1733425712459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_create_campaign.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_create_campaign Coverage Results" MODIFIED="1733490119616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests___init___DonationAPITestCase.coverage" NAME="Test: tests.__init__.DonationAPITestCase Coverage Results" MODIFIED="1733403240192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_create_donation.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_create_donation Coverage Results" MODIFIED="1733416137237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase.coverage" NAME="Test: tests.tests.DonationAPITestCase Coverage Results" MODIFIED="1733407668776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$ss.coverage" NAME="ss Coverage Results" MODIFIED="1733476486037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__donation_tests_DonationAPITestCase_test_create_campaign.coverage" NAME="Test: donation.tests.DonationAPITestCase.test_create_campaign Coverage Results" MODIFIED="1733403263729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_get_campaign_list.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_get_campaign_list Coverage Results" MODIFIED="1733403404855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__donation_tests_DonationAPITestCase.coverage" NAME="Test: donation.tests.DonationAPITestCase Coverage Results" MODIFIED="1733403258481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$gg.coverage" NAME="gg Coverage Results" MODIFIED="1733488301091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_update_campaign.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_update_campaign Coverage Results" MODIFIED="1733490528900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$as.coverage" NAME="as Coverage Results" MODIFIED="1733485730645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_create_donation.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_create_donation Coverage Results" MODIFIED="1733490644774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase.coverage" NAME="Test: tests.tests.DonationAPITestCase Coverage Results" MODIFIED="1733407668776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$add_donation.coverage" NAME="add_donation Coverage Results" MODIFIED="1733488616784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_register_user.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_register_user Coverage Results" MODIFIED="1733408811042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$utils.coverage" NAME="utils Coverage Results" MODIFIED="1733426083721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

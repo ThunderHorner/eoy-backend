@@ -23,7 +23,8 @@ class DonationAPITestCase(APITestCase):
             user=self.user,
             title="Test Campaign",
             goal=100.0,
-            collected=0.0
+            collected=0.0,
+            streamlabs_token="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZGE3NjI5Ny02OWMyLTQzMzEtOTFkZi0xY2ViNDZiOTVlYTkiLCJqdGkiOiJlMzE0NDAxMDc0ZDE1OWIwNTk4NjNmODg0ZTExYWFiYTBkZDNjZTYyMTlmZTM4NmVhNzIyODc4NjU2NTc0NWQ1ZjJhNDQ5YzE5NTI3NDU5NSIsImlhdCI6MTczMzQ4ODMxMS4wODU1NzYsIm5iZiI6MTczMzQ4ODMxMS4wODU1NzgsImV4cCI6MjM2NDY0MDMxMS4wNjM1NDIsInN1YiI6IjcxODgyOTgyIiwic2NvcGVzIjpbImRvbmF0aW9ucy5jcmVhdGUiLCJkb25hdGlvbnMucmVhZCIsImFsZXJ0cy5jcmVhdGUiLCJsZWdhY3kudG9rZW4iLCJzb2NrZXQudG9rZW4iLCJwb2ludHMucmVhZCIsInBvaW50cy53cml0ZSIsImFsZXJ0cy53cml0ZSIsImNyZWRpdHMud3JpdGUiLCJwcm9maWxlcy53cml0ZSIsImphci53cml0ZSIsIndoZWVsLndyaXRlIiwibWVkaWFzaGFyZS5jb250cm9sIl19.CuUZ4dkv7IeM6jS32ZCrkK6G8sdoSGgtXZo1N2q3itTw6uapYY1KaFzVOydzoPSStFbcKZjgD7RK52ILeFiZd30NOe5poNaLpnGDbQNgjTbvRWB4UeiSMZQGsjUetgTluWzecWzW4wm_k04YtGHTHrj5uJ44UVAE8Aqul3i-_fOLf-ScnElDSJhW3m_B2ZYh1XAneG46P73dQx3qv3PiFdAChlZzHqZLmCRfH7_z3Pc1Vz9GckWmCMLNxrZIhHgIrKVdYRdruKXE9KNqG01QMw_jvnqwvs4oBPXEPg4qmEIfJpws1vq6NaYpPNrsDbTvGKbL2hEbjCtGCPfxfkdjBmIvp09TW2Tv0ZEXvlwAYtnwEZP-sXcFbdWb-ac9TvYYBGtrAWv1oQ7SJJctdpRm-VLQ0UIqqFPrbiOOvrvbqqzuYIfR716IOki7-Jx8G7q85RxWMhC59VbPxoxPBclKJnm6xj1xcUhbKknVPZmb56YXsuk_L-NWKQZeIXogfnd136jWR_bZ80lsPSvS_5-EVE9uty7dFmzjicBgFsShcWdJ8zF8WTusWNgSKNsZ1WjBLawIRbFaR4ikd17cdeQhSe04FstO2zDjKoCYpp9HqB_LDKbHxxkWzkPJ3igHYei9v6pg_14qrGUEhDsSaLQlXMxc-0EALjYMSQAP6WtYdEI"
         )
 
     def test_create_campaign(self):
@@ -32,10 +33,11 @@ class DonationAPITestCase(APITestCase):
         data = {
             "title": "New Campaign",
             "goal": 200.0,
-            "wallet_address": "0xB23a9e81c098aeDeAa829708560c787C9F4c4F47"
+            "wallet_address": "0xB23a9e81c098aeDeAa829708560c787C9F4c4F47",
+            "streamlabs_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZGE3NjI5Ny02OWMyLTQzMzEtOTFkZi0xY2ViNDZiOTVlYTkiLCJqdGkiOiJlMzE0NDAxMDc0ZDE1OWIwNTk4NjNmODg0ZTExYWFiYTBkZDNjZTYyMTlmZTM4NmVhNzIyODc4NjU2NTc0NWQ1ZjJhNDQ5YzE5NTI3NDU5NSIsImlhdCI6MTczMzQ4ODMxMS4wODU1NzYsIm5iZiI6MTczMzQ4ODMxMS4wODU1NzgsImV4cCI6MjM2NDY0MDMxMS4wNjM1NDIsInN1YiI6IjcxODgyOTgyIiwic2NvcGVzIjpbImRvbmF0aW9ucy5jcmVhdGUiLCJkb25hdGlvbnMucmVhZCIsImFsZXJ0cy5jcmVhdGUiLCJsZWdhY3kudG9rZW4iLCJzb2NrZXQudG9rZW4iLCJwb2ludHMucmVhZCIsInBvaW50cy53cml0ZSIsImFsZXJ0cy53cml0ZSIsImNyZWRpdHMud3JpdGUiLCJwcm9maWxlcy53cml0ZSIsImphci53cml0ZSIsIndoZWVsLndyaXRlIiwibWVkaWFzaGFyZS5jb250cm9sIl19.CuUZ4dkv7IeM6jS32ZCrkK6G8sdoSGgtXZo1N2q3itTw6uapYY1KaFzVOydzoPSStFbcKZjgD7RK52ILeFiZd30NOe5poNaLpnGDbQNgjTbvRWB4UeiSMZQGsjUetgTluWzecWzW4wm_k04YtGHTHrj5uJ44UVAE8Aqul3i-_fOLf-ScnElDSJhW3m_B2ZYh1XAneG46P73dQx3qv3PiFdAChlZzHqZLmCRfH7_z3Pc1Vz9GckWmCMLNxrZIhHgIrKVdYRdruKXE9KNqG01QMw_jvnqwvs4oBPXEPg4qmEIfJpws1vq6NaYpPNrsDbTvGKbL2hEbjCtGCPfxfkdjBmIvp09TW2Tv0ZEXvlwAYtnwEZP-sXcFbdWb-ac9TvYYBGtrAWv1oQ7SJJctdpRm-VLQ0UIqqFPrbiOOvrvbqqzuYIfR716IOki7-Jx8G7q85RxWMhC59VbPxoxPBclKJnm6xj1xcUhbKknVPZmb56YXsuk_L-NWKQZeIXogfnd136jWR_bZ80lsPSvS_5-EVE9uty7dFmzjicBgFsShcWdJ8zF8WTusWNgSKNsZ1WjBLawIRbFaR4ikd17cdeQhSe04FstO2zDjKoCYpp9HqB_LDKbHxxkWzkPJ3igHYei9v6pg_14qrGUEhDsSaLQlXMxc-0EALjYMSQAP6WtYdEI"
         }
         response = self.client.post(url, data)
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.json())
         self.assertEqual(response.data['title'], "New Campaign")
 
     def test_get_campaign_list(self):
@@ -72,8 +74,8 @@ class DonationAPITestCase(APITestCase):
         data = {
             "name": "Kostas",
             "message": "Test donation",
-            "amount": "0.00001",
-            'currency':'ETH',
+            "amount": "0.05",
+            'currency':'BTC',
             "campaign": self.campaign.id,
             "tx_hash": "0xeb818a145cdc40d77c4d7f7078479742d48df1cde216bbbbb97374bae5d35a45"
         }

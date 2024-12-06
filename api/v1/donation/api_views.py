@@ -2,9 +2,13 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, generics, permissions
 from donation.models import Campaign, Donation
+from donation.utils import add_donation
 from .serializers import CampaignSerializer, DonationSerializer
 from django.db.models import F
-
+from django.db import transaction
+from django.db.models import F
+from rest_framework import status
+from rest_framework.response import Response
 
 class CampaignListCreateView(generics.ListCreateAPIView):
     queryset = Campaign.objects.all()
@@ -36,19 +40,43 @@ class DonationCreateView(APIView):
     permission_classes = [
         permissions.AllowAny,
     ]
+
     def post(self, request, campaign_id):
         try:
-            campaign = Campaign.objects.get(pk=campaign_id)
-        except Campaign.DoesNotExist:
-            return Response({"error": "Campaign not found"}, status=status.HTTP_404_NOT_FOUND)
+            with transaction.atomic():
+                try:
+                    campaign = Campaign.objects.get(pk=campaign_id)
+                except Campaign.DoesNotExist:
+                    return Response({"error": "Campaign not found"}, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = DonationSerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save(campaign=campaign)
-            campaign.collected = F('collected') + serializer.validated_data['amount']
-            campaign.save(update_fields=['collected'])
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                serializer = DonationSerializer(data=request.data)
+                if serializer.is_valid(raise_exception=True):
+                    donation = serializer.save(campaign=campaign)
+
+                    campaign.collected = F('collected') + serializer.validated_data['amount']
+                    campaign.save(update_fields=['collected'])
+
+                    try:
+                        add_donation(
+                            access_token=campaign.streamlabs_token,
+                            name=donation.name,
+                            identifier=donation.tx_hash,
+                            amount=float(donation.amount_usd),
+                            message=f"{donation.currency} {donation.formatted_amount} {donation.message or ''}" ,
+                            currency="USD"
+                        )
+                    except Exception as e:
+                        print(f"Streamlabs notification failed: {str(e)}")
+                    return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        except Exception as e:
+            # logger.error(f"Donation processing failed: {str(e)}")
+            return Response(
+                {"error": "Failed to process donation"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
 
     def get(self, request, campaign_id):
         try:

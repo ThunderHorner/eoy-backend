@@ -13,7 +13,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clone the specified branch from the GitHub repository
-                git branch: 'main', credentialsId: '10', url: "${env.GIT_REPO_URL}"
+                git branch: 'master', credentialsId: '10', url: "${env.GIT_REPO_URL}"
             }
         }
 

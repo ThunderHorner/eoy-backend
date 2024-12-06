@@ -26,6 +26,7 @@ class RegisterUserView(APIView):
         access_token = None
         if serializer.is_valid(raise_exception=True):
             access_token = get_access_token(serializer.validated_data['code'])
+            return Response({"token":access_token}, 400)
             streamlabs_user = get_user(access_token=access_token)
             sl_data = streamlabs_user.get('streamlabs', {})
             username = sl_data.get('username')

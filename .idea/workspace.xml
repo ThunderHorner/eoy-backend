@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Add jenkinsfile">
+    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Update requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +230,7 @@
       <updated>1733400438765</updated>
       <workItem from="1733400440119" duration="116000" />
       <workItem from="1733401775251" duration="29347000" />
-      <workItem from="1733471265940" duration="23963000" />
+      <workItem from="1733471265940" duration="24451000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -361,7 +360,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733501484748</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update branch name">
+      <option name="closed" value="true" />
+      <created>1733501834387</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733501834387</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update branch name">
+      <option name="closed" value="true" />
+      <created>1733501899000</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733501899000</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Update requirements.txt">
+      <option name="closed" value="true" />
+      <created>1733502016652</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733502016652</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +413,9 @@
     <MESSAGE value="Return the amount usd in the frontend" />
     <MESSAGE value="Add requirements" />
     <MESSAGE value="Add jenkinsfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add jenkinsfile" />
+    <MESSAGE value="Update branch name" />
+    <MESSAGE value="Update requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update requirements.txt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_DonationAPITestCase.coverage" NAME="Test: tests.DonationAPITestCase Coverage Results" MODIFIED="1733403185838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

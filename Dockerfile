@@ -22,7 +22,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY api /app/api/
 COPY donation /app/donation/
 COPY eoy_2024_backend /app/eoy_2024_backend/
-COPY templates /app/templates/
+#COPY templates /app/templates/
 COPY users /app/users/
 COPY manage.py /app/
 

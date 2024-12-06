@@ -53,7 +53,7 @@ class DonationCreateView(APIView):
                 if serializer.is_valid(raise_exception=True):
                     donation = serializer.save(campaign=campaign)
 
-                    campaign.collected = F('collected') + serializer.validated_data['amount']
+                    campaign.collected = F('collected') + donation.amount_usd
                     campaign.save(update_fields=['collected'])
 
                     try:

@@ -12,5 +12,5 @@ class CampaignSerializer(serializers.ModelSerializer):
 class DonationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Donation
-        fields = ['id', 'campaign', 'name', 'currency', 'message', 'amount', 'created_at', 'tx_hash']
-        read_only_fields = ['created_at']
+        fields = ['id', 'campaign', 'name','amount_usd', 'currency', 'message', 'amount', 'created_at', 'tx_hash']
+        read_only_fields = ['created_at', 'amount_usd']

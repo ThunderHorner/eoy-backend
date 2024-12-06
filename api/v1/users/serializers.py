@@ -3,6 +3,9 @@ from django.contrib.auth.password_validation import validate_password
 from users.models import User
 from rest_framework import serializers
 
+
+class StreamLabsSerializer(serializers.Serializer):
+    code = serializers.CharField(required=True)
 class RegisterUserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True)
     
@@ -28,3 +31,4 @@ class RegisterUserSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+

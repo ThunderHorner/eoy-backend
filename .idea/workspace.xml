@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Update requirements.txt">
+    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Update dockerfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/users/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/users/api_views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +231,7 @@
       <updated>1733400438765</updated>
       <workItem from="1733400440119" duration="116000" />
       <workItem from="1733401775251" duration="29347000" />
-      <workItem from="1733471265940" duration="24451000" />
+      <workItem from="1733471265940" duration="28718000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -384,7 +385,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733502016652</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Update dockerfile">
+      <option name="closed" value="true" />
+      <created>1733502323384</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733502323384</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Update dockerfile">
+      <option name="closed" value="true" />
+      <created>1733502703815</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733502703815</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +432,8 @@
     <MESSAGE value="Add jenkinsfile" />
     <MESSAGE value="Update branch name" />
     <MESSAGE value="Update requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update requirements.txt" />
+    <MESSAGE value="Update dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update dockerfile" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_DonationAPITestCase.coverage" NAME="Test: tests.DonationAPITestCase Coverage Results" MODIFIED="1733403185838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

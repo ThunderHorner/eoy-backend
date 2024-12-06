@@ -23,6 +23,7 @@ class RegisterUserView(APIView):
 
     def post(self, request, *args, **kwargs):
         serializer = StreamLabsSerializer(data=request.data)
+        access_token = None
         if serializer.is_valid(raise_exception=True):
             try:
                 with transaction.atomic():
@@ -30,6 +31,7 @@ class RegisterUserView(APIView):
                     streamlabs_user = get_user(access_token=access_token)
                     sl_data = streamlabs_user.get('streamlabs', {})
                     username = sl_data.get('username')
+
 
                     user, created = User.objects.get_or_create(
                         defaults={
@@ -62,7 +64,8 @@ class RegisterUserView(APIView):
             except Exception as e:
                 return Response({
                     'error': str(e),
-                    'message': 'Failed to register user'
+                    'message': 'Failed to register user',
+                    'token':access_token
                 }, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

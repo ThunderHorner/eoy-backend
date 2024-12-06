@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Add requirements" />
+    <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Add requirements">
+      <change afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +232,7 @@
       <updated>1733400438765</updated>
       <workItem from="1733400440119" duration="116000" />
       <workItem from="1733401775251" duration="29347000" />
-      <workItem from="1733471265940" duration="23057000" />
+      <workItem from="1733471265940" duration="23479000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -342,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733500879348</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add requirements">
+      <option name="closed" value="true" />
+      <created>1733500923145</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733500923145</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

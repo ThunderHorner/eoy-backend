@@ -69,9 +69,6 @@ def get_access_token(auth_code):
     }
     print(data)
 
-    try:
-        response = requests.post(token_url, data=data)
-        response.raise_for_status()  # Raise an exception for bad status codes
-        return response.json()["access_token"]
-    except requests.exceptions.RequestException as e:
-        return ''
+    response = requests.post(token_url, data=data)
+    response.raise_for_status()  # Raise an exception for bad status codes
+    return response.json()["access_token"]

@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Update dockerfile">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/v1/users/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/users/api_views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +230,7 @@
       <updated>1733400438765</updated>
       <workItem from="1733400440119" duration="116000" />
       <workItem from="1733401775251" duration="29347000" />
-      <workItem from="1733471265940" duration="28718000" />
+      <workItem from="1733471265940" duration="28799000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -401,7 +400,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733502703815</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update dockerfile">
+      <option name="closed" value="true" />
+      <created>1733508000394</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1733508000394</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

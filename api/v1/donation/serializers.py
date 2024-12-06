@@ -6,7 +6,7 @@ class CampaignSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Campaign
-        fields = ['id','wallet_address', 'streamlabs_token', 'title', 'goal', 'collected', 'user', 'created_at', 'updated_at']
+        fields = ['id','wallet_address', 'title', 'goal', 'collected', 'user', 'created_at', 'updated_at']
         read_only_fields = ['user', 'created_at', 'updated_at']
 
 class DonationSerializer(serializers.ModelSerializer):

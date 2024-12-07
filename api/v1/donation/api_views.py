@@ -61,7 +61,7 @@ class DonationCreateView(APIView):
                             access_token=campaign.user.streamlabs_token,
                             name=donation.name,
                             identifier=donation.tx_hash,
-                            amount=float(donation.amount_usd),
+                            amount=float(donation.amount),
                             message=f"{donation.message or ''}" ,
                             currency="USD"
                         )

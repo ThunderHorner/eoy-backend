@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94a89158-beec-4359-a871-36106fea0407" name="Changes" comment="Update dockerfile">
-      <change beforePath="$PROJECT_DIR$/api/v1/users/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/users/api_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/donation/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/donation/api_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,38 +29,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.eoy_2024_backend.executor": "Run",
-    "Django tests.Test: donation.tests.DonationAPITestCase.executor": "Run",
-    "Django tests.Test: donation.tests.DonationAPITestCase.test_create_campaign.executor": "Run",
-    "Django tests.Test: tests.DonationAPITestCase.executor": "Run",
-    "Django tests.Test: tests.__init__.DonationAPITestCase.executor": "Run",
-    "Django tests.Test: tests.tests.DonationAPITestCase.executor": "Run",
-    "Django tests.Test: tests.tests.DonationAPITestCase.test_create_campaign.executor": "Run",
-    "Django tests.Test: tests.tests.DonationAPITestCase.test_create_donation.executor": "Run",
-    "Django tests.Test: tests.tests.DonationAPITestCase.test_get_campaign_list.executor": "Run",
-    "Django tests.Test: tests.tests.DonationAPITestCase.test_register_user.executor": "Run",
-    "Django tests.Test: tests.tests.DonationAPITestCase.test_update_campaign.executor": "Run",
-    "Python.add_donation.executor": "Run",
-    "Python.as.executor": "Run",
-    "Python.ff.executor": "Run",
-    "Python.gg.executor": "Run",
-    "Python.ss.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ThunderHorn/PycharmProjects/eoy_2024_backend/donation",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.eoy_2024_backend.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: donation.tests.DonationAPITestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: donation.tests.DonationAPITestCase.test_create_campaign.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.DonationAPITestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.__init__.DonationAPITestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.tests.DonationAPITestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.tests.DonationAPITestCase.test_create_campaign.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.tests.DonationAPITestCase.test_create_donation.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.tests.DonationAPITestCase.test_get_campaign_list.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.tests.DonationAPITestCase.test_register_user.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.tests.DonationAPITestCase.test_update_campaign.executor&quot;: &quot;Run&quot;,
+    &quot;Python.add_donation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.as.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ff.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gg.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ss.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ThunderHorn/PycharmProjects/eoy_2024_backend/donation&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ThunderHorn\PycharmProjects\eoy_2024_backend\donation" />
@@ -230,7 +232,8 @@
       <updated>1733400438765</updated>
       <workItem from="1733400440119" duration="116000" />
       <workItem from="1733401775251" duration="29347000" />
-      <workItem from="1733471265940" duration="28799000" />
+      <workItem from="1733471265940" duration="24451000" />
+      <workItem from="1733533098136" duration="2637000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -386,27 +389,27 @@
     </task>
     <task id="LOCAL-00020" summary="Update dockerfile">
       <option name="closed" value="true" />
-      <created>1733502323384</created>
+      <created>1733508985916</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1733502323384</updated>
+      <updated>1733508985916</updated>
     </task>
     <task id="LOCAL-00021" summary="Update dockerfile">
       <option name="closed" value="true" />
-      <created>1733502703815</created>
+      <created>1733509032738</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1733502703815</updated>
+      <updated>1733509032738</updated>
     </task>
     <task id="LOCAL-00022" summary="Update dockerfile">
       <option name="closed" value="true" />
-      <created>1733508000394</created>
+      <created>1733509073350</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1733508000394</updated>
+      <updated>1733509073350</updated>
     </task>
     <option name="localTasksCounter" value="23" />
     <servers />
@@ -451,7 +454,7 @@
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__donation_tests_DonationAPITestCase_test_create_campaign.coverage" NAME="Test: donation.tests.DonationAPITestCase.test_create_campaign Coverage Results" MODIFIED="1733403263729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_get_campaign_list.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_get_campaign_list Coverage Results" MODIFIED="1733403404855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__donation_tests_DonationAPITestCase.coverage" NAME="Test: donation.tests.DonationAPITestCase Coverage Results" MODIFIED="1733403258481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/eoy_2024_backend$gg.coverage" NAME="gg Coverage Results" MODIFIED="1733493067075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/eoy_2024_backend$gg.coverage" NAME="gg Coverage Results" MODIFIED="1733508276930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_update_campaign.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_update_campaign Coverage Results" MODIFIED="1733490528900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$as.coverage" NAME="as Coverage Results" MODIFIED="1733485730645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/eoy_2024_backend$Test__tests_tests_DonationAPITestCase_test_create_donation.coverage" NAME="Test: tests.tests.DonationAPITestCase.test_create_donation Coverage Results" MODIFIED="1733490644774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

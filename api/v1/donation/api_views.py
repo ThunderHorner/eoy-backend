@@ -62,7 +62,7 @@ class DonationCreateView(APIView):
                             name=donation.name,
                             identifier=donation.tx_hash,
                             amount=float(donation.amount_usd),
-                            message=f"{donation.currency} {donation.formatted_amount} {donation.message or ''}" ,
+                            message=f"{donation.message or ''}" ,
                             currency="USD"
                         )
                     except Exception as e:

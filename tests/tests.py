@@ -79,6 +79,24 @@ class DonationAPITestCase(APITestCase):
             "campaign": self.campaign.id,
             "tx_hash": "0xeb818a145cdc40d77c4d7f7078479742d48df1cde216bbbbb97374bae5d35a45"
         }
+
+
+        """
+        {name: "Kosta", message: "Test", amount: "0.05", campaign: "9", currency: "ETH",…}
+amount
+: 
+"0.05"
+campaign
+: 
+"9"
+currency
+: 
+"ETH"
+message
+: 
+"Test"name:"Kosta"
+request_id: "0122a7903a7c081307ed39ab30d9123f9f87bcc99ce0047844f681c1b1585a4015"
+        """
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.json())
         self.assertEqual(response.data['name'], data['name'])
